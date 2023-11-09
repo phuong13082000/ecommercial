@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(1rem);
+  }
+}
+
+* {
+  @apply m-0 box-border border-none p-0 no-underline outline-none;
+  font-family: "Nunito", sans-serif;
+}
+
+*::selection {
+  @apply text-white bg-main;
+}
+
+::-webkit-scrollbar {
+  @apply h-2 w-4;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-main;
+}
+
+html {
+  @apply overflow-x-hidden text-[62.5%] sm:text-[50%] lg:text-[55%];
+}
+
+.heading {
+  @apply mb-8 text-center uppercase text-black text-[4rem] sm:text-[3rem];
+}
+
+.border-normal {
+  @apply border-solid border-black border-[.2rem];
+}
+
+.border-t-normal {
+  @apply border-solid border-t-black border-t-[.2rem];
+}
+
+.border-b-normal {
+  @apply border-solid border-b-black border-b-[.2rem];
+}
+
+.shadow-normal {
+  @apply shadow-[0_.5rem_1rem_rgba(0,0,0,0.1)];
+}
+
+.btn,
+.option-btn,
+.delete-btn {
+  @apply mt-4 block w-full cursor-pointer rounded-lg text-center capitalize text-white p-[1rem_3rem] text-[1.7rem] hover:bg-black;
+}
+
+.btn {
+  @apply bg-main;
+}
+
+.option-btn {
+  @apply bg-orange;
+}
+
+.delete-btn {
+  @apply bg-red;
+}
+
+.empty {
+  @apply rounded-lg bg-white p-6 text-center capitalize border-normal shadow-normal text-red text-[2rem];
+}
+
+.flex-btn {
+  @apply flex gap-4;
+}
+
+h3 {
+  @apply text-black text-[3rem];
+}
+
+textarea,
+input,
+select {
+  @apply w-full rounded-lg text-[1.8rem] bg-light-bg;
+}
+
+p {
+  @apply text-black text-[2rem];
+}
+
+img {
+  @apply w-full object-contain;
+}
+
+@media (max-width: 450px) {
+  .flex-btn {
+    flex-flow: column;
+    gap: 0;
+  }
+}
